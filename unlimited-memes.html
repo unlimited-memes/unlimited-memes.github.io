@@ -3437,18 +3437,18 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
 mixpanel.init("91430bc5399de09992079a430e19dcc2");</script><!-- end Mixpanel -->
 <script>
 var scrollEventFired = false;
+var variant = document.location.href;
 
 lp.jQuery(document).ready(function() {
   
   $("#powered-by-unbounce a").text("");
   
-  var variant = document.location.href;
   try {
     variant = document.location.pathname.split(".")[0].split("/")[1];
   } catch (err) {}
   
   try {
-    window._fbq.push(['track', '6033253197657', {'value':'5.00','currency':'USD'}]);
+    window._fbq.push(['track', '6033253197657', {'value':'1.00','currency':'USD'}]);
   } catch(err){}
   
   
@@ -3467,7 +3467,7 @@ lp.jQuery(document).ready(function() {
     fireEmailCapture(window, document);
     
     // GA
-    ga('send', 'event', 'tumblr-follow-maker', 'App download clicked', '', 1);
+    ga('send', 'event', variant, 'App download clicked', '', 1);
     
     
     // Mixpanel
@@ -3493,7 +3493,7 @@ lp.jQuery(document).ready(function() {
   
 }); // document.ready
 </script>
-<!-- Facebook Conversion Code for Leads - Follow Maker - Instagram -->
+<!-- Facebook Conversion Code for Leads -->
 <script>(function() {
   var _fbq = window._fbq || (window._fbq = []);
   if (!_fbq.loaded) {
